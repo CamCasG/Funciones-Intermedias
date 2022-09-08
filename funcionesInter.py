@@ -32,13 +32,12 @@ estudiantes = [
     {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
 
-def iterateDictionary(call):
-    return call                                             
-
-print(iterateDictionary(estudiantes)[0])                            #llamo al primer indice de estudiantes...
-print(iterateDictionary(estudiantes)[1])
-print(iterateDictionary(estudiantes)[2])
-print(iterateDictionary(estudiantes)[3])                           #y así cada índice hasta el último.
+def iterateDictionary(data_entrada):
+    for iterador in data_entrada:                                                       #en este caso, data_entrada es la info que le enviamos a la función.
+        valor = list(iterador.items())                                                  #transformar el diccionario en una lista
+        print(valor[0][0]," - ", valor[0][1], ",", valor[1][0]," - ", valor[1][1])      #se llama índice x índice para lo visual a la hora de imprimir en la consola. Si solo imprimiera valor
+                                                                                                #igual lo mostraría todo. 
+iterateDictionary(estudiantes)
 
 
 
